@@ -1,3 +1,26 @@
+class shape {
+
+  constructor(options) {
+    Object.assign(this, options)
+  }
+
+  getArea(){
+
+    let forma = new shape.shapes[this.constructor.name](this);
+    let area = forma.getArea();
+    return area;
+  }
+}
+
+
+shape.shapes = shape.shapes || {};
+module.exports = {
+  shape:shape
+}
+
+
+
+/*
 module.exports = function(shape, options) {
   var area = 0;
 
@@ -20,3 +43,4 @@ module.exports = function(shape, options) {
 
   return area;
 }
+*/

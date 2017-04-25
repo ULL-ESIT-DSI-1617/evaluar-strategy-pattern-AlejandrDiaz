@@ -1,13 +1,24 @@
-(function(export) {
+var shape = require('./shapesarea.js');
 
-(function(shapes) {
-  var Rectangle = shapes.Rectangle = function(options) {
-    this.width = options.width;
-    this.height = options.height;
-  };
-  Rectangle.prototype.getArea = function() {
-    return options.width * options.height;
-  };
-}(window.shapes = window.shapes || {}));
 
-})(this);
+class rectangle extends shape {
+  constructor(options){
+    super(options);
+
+  }
+
+
+   getArea(){
+
+      return this.width * this.height;
+   }
+
+
+}
+
+
+shape.shapes.rectangle = rectangle;
+
+module.exports = {
+  rectangle:rectangle
+}

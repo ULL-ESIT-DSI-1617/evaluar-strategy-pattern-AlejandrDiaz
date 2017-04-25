@@ -1,13 +1,24 @@
-(function(export) {
+var shape = require('./shapesarea.js');
 
-(function(shapes) {
-  var Triangle = shapes.Triangle = function(options) {
-    this.width = options.width;
-    this.height = options.height;
-  };
-  Triangle.prototype.getArea = function() {
-    return 0.5 * this.width * this.height;
-  };
-}(window.shapes = window.shapes || {}));
 
-})(this);
+class triangle extends shape {
+  constructor(options){
+    super(options);
+
+  }
+
+
+   getArea(){
+
+      return 0.5 * this.width * this.height;
+   }
+
+
+}
+
+
+shape.shapes.triangle = triangle;
+
+module.exports = {
+  triangle:triangle
+}

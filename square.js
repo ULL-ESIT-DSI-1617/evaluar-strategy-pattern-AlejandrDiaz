@@ -1,12 +1,24 @@
-(function(export) {
+var shape = require('./shapesarea.js');
 
-(function(shapes) {
-  var Square = shapes.Square = function(options) {
-    this.width = options.width;
-  };
-  Square.prototype.getArea = function() {
-    return Math.pow(options.width, 2);
-  };
-}(window.shapes = window.shapes || {}));
 
-})(this);
+class square extends shape {
+  constructor(options){
+    super(options);
+
+  }
+
+
+   getArea(){
+
+      return Math.pow(this.width, 2);
+   }
+
+
+}
+
+
+shape.shapes.square = square;
+
+module.exports = {
+  square:square
+}
