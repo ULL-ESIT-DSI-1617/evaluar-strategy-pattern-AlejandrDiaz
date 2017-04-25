@@ -1,9 +1,13 @@
-var getArea = require("../shapesarea.js");
 
-describe("getArea", function() {
-  it("must compute the triangle area correctly", function() {
-    var result = getArea('Triangle',  { width: 100, height: 100 });
+var Square = require('../square.js');
+
+require('should');
+
+describe("Square", function() {
+  it("must compute the square area correctly", function() {
+    var forma = new Square({ width: 100});
+    var area = forma.getArea();
     /* There is a white space between consecutive columns */
-    result.should.match(/^5000$/);
+    area.should.match(/^10000$/);
   })
 });
