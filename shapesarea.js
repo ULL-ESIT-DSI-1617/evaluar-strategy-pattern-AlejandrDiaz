@@ -14,9 +14,8 @@ class shape {
 
 
 shape.shapes = shape.shapes || {};
-module.exports = {
-  shape:shape
-}
+module.exports = shape;
+
 
 
 
