@@ -19,6 +19,4 @@ class triangle extends shape {
 
 shape.shapes.triangle = triangle;
 
-module.exports = {
-  triangle:triangle
-}
+module.exports = triangle;

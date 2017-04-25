@@ -19,6 +19,4 @@ class rectangle extends shape {
 
 shape.shapes.rectangle = rectangle;
 
-module.exports = {
-  rectangle:rectangle
-}
+module.exports = rectangle;

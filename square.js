@@ -19,6 +19,4 @@ class square extends shape {
 
 shape.shapes.square = square;
 
-module.exports = {
-  square:square
-}
+module.exports = square;
